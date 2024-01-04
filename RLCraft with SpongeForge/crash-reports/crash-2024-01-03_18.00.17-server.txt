@@ -1,0 +1,378 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  MixinLoader (BedBreakBegone-1.0.2.jar)
+  SimpleDifficulty ASM (SimpleDifficulty-1.12.2-0.3.9.jar)
+  RLTweaker ASM (RLTweaker-1.12.2-0.5.12.jar)
+  LibrarianLib Plugin (librarianlib-1.12.2-4.22.jar)
+  ParticleCullingLoadingPlugin (particleculling-1.12.2-v1.4.1.jar)
+  WolfArmorCore (WolfArmorAndStorage-3.8.1+1.12.2.alpha.1-SNAPSHOT-signed.jar)
+  ItemPatchingLoader (ItemPhysic_Full_1.4.37_mc1.12.2.jar)
+  MixinLoader (Locks-1.12.2-3.0.0.jar)
+  TransformLoader (DynamicSurroundings-1.12.2-3.6.2.1.jar)
+  PhosphorFMLLoadingPlugin (phosphor-forge-mc1.12.2-0.2.7-universal.jar)
+  Quark Plugin (Quark-r1.6-179.jar)
+  RLMixinsPlugin (RLMixins-1.2.15.jar)
+  LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+  SpartanWeaponry-MixinLoader (SpartanWeaponry-1.12.2-1.5.3.jar)
+  LoadingPlugin (ResourceLoader-MC1.12.1-1.5.3.jar)
+  IvToolkit (IvToolkit-1.3.3-1.12.jar)
+  LoadingPlugin (Reskillable-1.12.2-1.13.0.jar)
+  Inventory Tweaks Coremod (InventoryTweaks-1.64+dev.151.jar)
+  SpongeCoremod (spongeforge-1.12.2-2838-7.4.7.jar)
+  RBLoadingPlugin (RealBench-1.12.2-1.3.3.jar)
+  SSLoadingPlugin (SereneSeasons-1.12.2-1.2.18-universal.jar)
+  ReachFixPlugin (ReachFix-1.12.2-1.0.8.jar)
+  SoManyEnchantments ASM (SoManyEnchantments-0.5.5.jar)
+  ForgelinPlugin (Forgelin-1.8.4.jar)
+  CreativePatchingLoader (CreativeCore_v1.10.70_mc1.12.2.jar)
+  MaterialTweakerPlugin (MaterialTweaker-1.1.1.jar)
+  Snow! Real Magic! (SnowRealMagic-1.12.2-0.7.1.jar)
+  SurgeLoadingPlugin (Surge-1.12.2-2.0.79.jar)
+  MixinBooter (!mixinbooter-8.9.jar)
+  Born in a Barn (Born In A Barn V1.8-1.12-1.1.jar)
+  CharmLoadingPlugin (Charm-1.12.2-1.4.1.jar)
+  llibrary (llibrary-core-1.0.11-1.12.2.jar)
+  CorePlugin (ForgeEndertech-1.12.2-4.5.6.1-build.0648.jar)
+  Better Biome Blend (betterbiomeblend-1.12.2-1.1.7-forge.jar)
+  TNTUtilities Core (tnt_utilities-mc1.12-1.2.3.jar)
+  MixinLoader (framevoidpatch-1.0.0.jar)
+Contact their authors BEFORE contacting forge
+
+// Oops.
+
+Time: 1/3/24 6:00 PM
+Description: Exception in server tick loop
+
+Missing Mods:
+	unknown : need [7.4.8,): have 1.12.2-2838-7.4.7
+
+net.minecraftforge.fml.common.MissingModsException: Mod mixinbooter (MixinBooter) requires [spongeforge@[7.4.8,)]
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:266)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:572)
+	at net.minecraftforge.fml.server.FMLServerHandler.beginServerLoading(FMLServerHandler.java:98)
+	at net.minecraftforge.fml.common.FMLCommonHandler.onServerStart(FMLCommonHandler.java:333)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:486)
+	at java.lang.Thread.run(Thread.java:750)
+
+(MixinBooter) Mixins in Stacktrace:
+	net/minecraft/server/MinecraftServer:
+		org.spongepowered.common.mixin.core.server.MinecraftServerAccessor (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.api.service.permission.SubjectMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.optimization.server.MinecraftServerMixin_MapOptimization (mixins.common.optimization.json) [unknown-location]
+		org.spongepowered.mod.mixin.core.server.MinecraftServerMixin_Forge (mixins.forge.core.json) [unknown-location]
+		org.spongepowered.mod.mixin.optimization.threadchecks.MinecraftServerMixin_ForgeThreadChecks (mixins.forge.optimization.json) [unknown-location]
+		com.github.terminatornl.tiquality.mixin.MixinMinecraftServer (mixins.tiquality.json) [unknown-location]
+		org.spongepowered.mod.mixin.api.minecraft.server.MinecraftServerMixin_ForgeAPI (mixins.forge.api.json) [unknown-location]
+		org.spongepowered.common.mixin.api.command.CommandSourceMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.exploit.MinecraftServerMixin_JNDIChatMessageBlock (mixins.common.exploit.json) [unknown-location]
+		org.spongepowered.common.mixin.api.mcp.server.MinecraftServerMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.core.service.permission.SubjectMixin (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.core.command.ICommandSenderMixin (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.core.server.MinecraftServerMixin (mixins.common.core.json) [unknown-location]
+	net/minecraftforge/fml/common/Loader:
+		rlmixins.mixin.RLMixinsMixinLoader (mixins.rlmixins.init.json) [unknown-location]
+		org.spongepowered.mod.mixin.core.fml.common.LoaderMixin_Forge (mixins.forge.preinit.json) [unknown-location]
+	net/minecraft/server/dedicated/DedicatedServer:
+		org.spongepowered.common.mixin.core.server.DedicatedServerMixin (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.api.mcp.server.DedicatedServerMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.core.server.DedicatedServerAccessor (mixins.common.core.json) [unknown-location]
+	net/minecraft/server/MinecraftServer:
+		org.spongepowered.common.mixin.core.server.MinecraftServerAccessor (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.api.service.permission.SubjectMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.optimization.server.MinecraftServerMixin_MapOptimization (mixins.common.optimization.json) [unknown-location]
+		org.spongepowered.mod.mixin.core.server.MinecraftServerMixin_Forge (mixins.forge.core.json) [unknown-location]
+		org.spongepowered.mod.mixin.optimization.threadchecks.MinecraftServerMixin_ForgeThreadChecks (mixins.forge.optimization.json) [unknown-location]
+		com.github.terminatornl.tiquality.mixin.MixinMinecraftServer (mixins.tiquality.json) [unknown-location]
+		org.spongepowered.mod.mixin.api.minecraft.server.MinecraftServerMixin_ForgeAPI (mixins.forge.api.json) [unknown-location]
+		org.spongepowered.common.mixin.api.command.CommandSourceMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.exploit.MinecraftServerMixin_JNDIChatMessageBlock (mixins.common.exploit.json) [unknown-location]
+		org.spongepowered.common.mixin.api.mcp.server.MinecraftServerMixin_API (mixins.common.api.json) [unknown-location]
+		org.spongepowered.common.mixin.core.service.permission.SubjectMixin (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.core.command.ICommandSenderMixin (mixins.common.core.json) [unknown-location]
+		org.spongepowered.common.mixin.core.server.MinecraftServerMixin (mixins.common.core.json) [unknown-location]
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraftforge.fml.common.Loader.sortModList(Loader.java:266)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:572)
+
+-- Sponge PhaseTracker --
+Details:
+	Phase Stack: [Empty stack]
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.handler$zlo000$onCrashReport(MinecraftServer.java:4687)
+	at net.minecraft.server.MinecraftServer.func_71230_b(MinecraftServer.java:889)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71230_b(DedicatedServer.java:371)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:558)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 6.5.6-300.fc39.x86_64
+	Java Version: 1.8.0_392, Red Hat, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Red Hat, Inc.
+	Memory: 462584336 bytes (441 MB) / 2619867136 bytes (2498 MB) up to 7635730432 bytes (7282 MB)
+	JVM Flags: 2 total; -Xmx8192m -Xms256m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2860 163 mods loaded, 163 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	Mods:
+
+	| State | ID                          | Version                    | Source                                                       | Signature                                |
+	|:----- |:--------------------------- |:-------------------------- |:------------------------------------------------------------ |:---------------------------------------- |
+	| L     | minecraft                   | 1.12.2                     | minecraft.jar                                                | None                                     |
+	| L     | mcp                         | 9.42                       | minecraft.jar                                                | None                                     |
+	| L     | FML                         | 8.0.99.99                  | forge-1.12.2-14.23.5.2860.jar                                | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | forge                       | 14.23.5.2860               | forge-1.12.2-14.23.5.2860.jar                                | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| L     | creativecoredummy           | 1.0.0                      | minecraft.jar                                                | None                                     |
+	| L     | itemphysic                  | 1.4.0                      | minecraft.jar                                                | None                                     |
+	| L     | ivtoolkit                   | 1.3.3-1.12                 | minecraft.jar                                                | None                                     |
+	| L     | mixinbooter                 | 8.9                        | minecraft.jar                                                | None                                     |
+	| L     | spongeapi                   | 7.4.0-5ea6215              | spongeforge-1.12.2-2838-7.4.7.jar                            | None                                     |
+	| L     | sponge                      | 1.12.2-7.4.7               | spongeforge-1.12.2-2838-7.4.7.jar                            | None                                     |
+	| L     | spongeforge                 | 1.12.2-2838-7.4.7          | spongeforge-1.12.2-2838-7.4.7.jar                            | None                                     |
+	| L     | tnt_utilities_core          | 1.2.3                      | minecraft.jar                                                | None                                     |
+	| L     | adhooks                     | 1.12.2-3.3.1.0             | AdHooks-1.12.2-3.3.1.0-build.0626.jar                        | None                                     |
+	| L     | advanced-fishing            | 1.3.3                      | Advanced-Fishing-1.12.2-1.3.3.jar                            | None                                     |
+	| L     | aireducer                   | 0.3.0                      | AIReducer-1.12.2-0.3.0.jar                                   | None                                     |
+	| L     | alcatrazcore                | 1.0.4                      | alcatrazcore-1.0.4.jar                                       | None                                     |
+	| L     | antiqueatlas                | 4.6.3                      | antiqueatlas-1.12.2-4.6.3.jar                                | None                                     |
+	| L     | antiquecities               | 1.0                        | antiquecities-1.2.1.jar                                      | None                                     |
+	| L     | anvilpatch                  | 1.1.1                      | anvilpatch-1.1.1.jar                                         | None                                     |
+	| L     | aquaculture                 | 1.6.8                      | Aquaculture-1.12.2-1.6.8.jar                                 | None                                     |
+	| L     | armorunder                  | 1.0.0                      | armorunder-mc1.12.2-1.0.0.jar                                | None                                     |
+	| L     | astikorcarts                | 1.12.2-0.1.2.8             | astikorcarts-1.12.2-0.1.2.8.jar                              | None                                     |
+	| L     | attributefix                | 1.0.12                     | AttributeFix-Forge-1.12.2-1.0.12.jar                         | None                                     |
+	| L     | autoreglib                  | 1.3-32                     | AutoRegLib-1.3-32.jar                                        | None                                     |
+	| L     | base                        | 3.14.0                     | base-1.12.2-3.14.0.jar                                       | None                                     |
+	| L     | battletowers                | 1.6.5                      | BattleTowers-1.12.2.jar                                      | None                                     |
+	| L     | baubles                     | 1.5.2                      | Baubles-1.12-1.5.2.jar                                       | None                                     |
+	| L     | bedbreakbegone              | 1.0.2                      | BedBreakBegone-1.0.2.jar                                     | None                                     |
+	| L     | mujmajnkraftsbettersurvival | 1.5.3                      | better_survival-1.5.3.jar                                    | None                                     |
+	| L     | bettercaves                 | 1.12.2                     | bettercaves-1.12.2-2.0.4.jar                                 | None                                     |
+	| L     | bettermineshafts            | 1.12.2-2.2.1               | BetterMineshaftsForge-1.12.2-2.2.1.jar                       | None                                     |
+	| L     | betternether                | 0.1.8.6                    | betternether-0.1.8.6.jar                                     | None                                     |
+	| L     | betterquesting              | 3.5.329                    | BetterQuesting-3.5.329.jar                                   | None                                     |
+	| L     | bettertabs                  | 1.0.4                      | BetterTabs-1.0.4.jar                                         | None                                     |
+	| L     | bloodmoon                   | 1.5.3                      | Bloodmoon-MC1.12.2-1.5.3.jar                                 | None                                     |
+	| L     | bnbgaminglib                | 2.17.6                     | BNBGamingLib-1.12.2-2.17.6.jar                               | None                                     |
+	| L     | bountifulbaubles            | 0.0.1                      | Bountiful+Baubles-1.12.2-0.1.8.jar                           | None                                     |
+	| L     | bountiful                   | 2.2.3                      | Bountiful-1.12.2-2.2.3.jar                                   | None                                     |
+	| L     | bq_msi                      | 1.0.9                      | BQ_Multiblock_Structure_Integration-1.0.9.jar                | None                                     |
+	| L     | bqtweaker                   | 1.3.5                      | BQTweaker-1.3.5.jar                                          | None                                     |
+	| L     | callablehorses              | 1.1.1                      | callablehorses-1.12.2-1.1.1.jar                              | None                                     |
+	| L     | carrots                     | 1.0.0b1                    | carrotslib-mc1.12.2-1.0.0b1.jar                              | None                                     |
+	| L     | carryon                     | 1.12.3                     | carryon-1.12.2-1.12.7.23.jar                                 | None                                     |
+	| L     | champions                   | 1.12.2-1.0.11.10           | champions-1.12.2-1.0.11.10.jar                               | None                                     |
+	| L     | charm                       | 1.4                        | Charm-1.12.2-1.4.1.jar                                       | None                                     |
+	| L     | classyhats                  | %VERSION%                  | classyhats-1.6.0.jar                                         | None                                     |
+	| L     | collisiondamage             | 1.2.2                      | CollisionDamage-1.2.2.jar                                    | None                                     |
+	| L     | comforts                    | 1.4.1.3                    | comforts-1.12.2-1.4.1.3.jar                                  | None                                     |
+	| L     | compatskills                | 1.12.2-1.17.0              | CompatSkills-1.12.2-1.17.0.jar                               | None                                     |
+	| L     | contenttweaker              | 1.12.2-4.10.0              | ContentTweaker-1.12.2-4.10.0.jar                             | None                                     |
+	| L     | coralreef                   | 2.0                        | CoralReef-2.5-1.12.2.jar                                     | None                                     |
+	| L     | corpsecomplex               | 1.0.12.0                   | corpsecomplex-1.12.2-1.0.12.0.jar                            | None                                     |
+	| L     | craftablechainmail          | 1.0                        | craftablechainmail-1.0.jar                                   | None                                     |
+	| L     | crafttweaker                | 4.1.20                     | CraftTweaker2-1.12-4.1.20.687.jar                            | None                                     |
+	| L     | crafttweakerjei             | 2.0.3                      | CraftTweaker2-1.12-4.1.20.687.jar                            | None                                     |
+	| L     | creativecore                | 1.10.0                     | CreativeCore_v1.10.70_mc1.12.2.jar                           | None                                     |
+	| L     | defiledlands                | 1.4.3                      | defiledlands-1.12.2-1.4.3.jar                                | None                                     |
+	| L     | disenchanter                | 1.8                        | disenchanter[1.12]1.8.jar                                    | None                                     |
+	| L     | dldungeonsjbg               | 1.14.12                    | DoomlikeDungeons-1.14.12-MC1.12.2.jar                        | None                                     |
+	| L     | dsurround                   | 3.6.2.1                    | DynamicSurroundings-1.12.2-3.6.2.1.jar                       | None                                     |
+	| L     | dynamictrees                | 1.12.2-0.9.29              | DynamicTrees-1.12.2-0.9.29.jar                               | None                                     |
+	| L     | dynamictreesdefiledlands    | 1.12.2-1.0.0               | dynamictreesdefiledlands-1.12.2-1.0.0.jar                    | None                                     |
+	| L     | dttraverse                  | 1.12.2-2.1                 | DynamicTreesTraverse-1.12.2-2.1.jar                          | None                                     |
+	| L     | elenaidodge                 | 2.1                        | ElenaiDodge-1.12.2-2.1.jar                                   | None                                     |
+	| L     | enhancedvisuals             | 1.3.0                      | EnhancedVisuals_v1.4.4_mc1.12.2.jar                          | None                                     |
+	| L     | familiarfauna               | 1.0.11                     | FamiliarFauna-1.12.2-1.0.11.jar                              | None                                     |
+	| L     | fantasticlib                | 1.12.2.047                 | FantasticLib-1.12.2.047.jar                                  | None                                     |
+	| L     | firstaid                    | 1.6.22                     | firstaid-1.6.22.jar                                          | None                                     |
+	| L     | fishingmadebetter           | 2.2.6                      | FishingMadeBetter-1.12.2-2.2.6.jar                           | None                                     |
+	| L     | foodexpansion               | 1.3                        | FoodExpansion1.3.3-1.12.2.jar                                | None                                     |
+	| L     | forgeendertech              | 1.12.2-4.5.6.1             | ForgeEndertech-1.12.2-4.5.6.1-build.0648.jar                 | None                                     |
+	| L     | forgelin                    | 1.8.4                      | Forgelin-1.8.4.jar                                           | None                                     |
+	| L     | forgottenitems              | 1.2.1                      | forgottenitems-1.12.2-1.3.1.4.jar                            | None                                     |
+	| L     | framevoidpatch              | 1.0.0                      | framevoidpatch-1.0.0.jar                                     | None                                     |
+	| L     | friendlyendermite           | 1.0                        | FriendlyEndermite_v1.0.1_mc1.12.2.jar                        | None                                     |
+	| L     | fxcontrol                   | 0.1.14                     | fxcontrol-1.12-0.1.15.jar                                    | None                                     |
+	| L     | globalgamerules             | 2.2                        | GlobalGameRules-1.12.2-2.2.7.jar                             | None                                     |
+	| L     | grapplemod                  | 1.12.2-v12.3               | grapplemod-1.12.2-v12.3.jar                                  | None                                     |
+	| L     | helpfixer                   | 1.12.1-1.5.18              | HelpFixer-1.12.1-1.5.18.jar                                  | None                                     |
+	| L     | iceandfire                  | 1.7.1                      | iceandfire-1.7.1-1.12.2.jar                                  | None                                     |
+	| L     | ichunutil                   | 7.2.2                      | iChunUtil-1.12.2-7.2.2.jar                                   | None                                     |
+	| L     | incontrol                   | 3.9.18                     | incontrol-1.12-3.9.18.jar                                    | None                                     |
+	| L     | infernalmobs                | 1.7.6                      | InfernalMobs-1.12.2.jar                                      | None                                     |
+	| L     | inspirations                | 1.12.2-0.2.9               | Inspirations-1.12.2-0.2.9.jar                                | None                                     |
+	| L     | inventorytweaks             | 1.64+dev.151.822d839       | InventoryTweaks-1.64+dev.151.jar                             | None                                     |
+	| L     | iseedragons                 | 1.2.1                      | ISeeDragons-1.2.1.jar                                        | None                                     |
+	| L     | itlt                        | 1.0.4                      | itlt-1.12.x-1.0.4.jar                                        | None                                     |
+	| L     | jei                         | 4.16.1.302                 | jei_1.12.2-4.16.1.302.jar                                    | None                                     |
+	| L     | levelup2                    | ${version}                 | Level Up! 2-1.1.23-1.12.jar                                  | None                                     |
+	| L     | librarianliblate            | 4.22                       | librarianlib-1.12.2-4.22.jar                                 | None                                     |
+	| L     | librarianlib                | 4.22                       | librarianlib-1.12.2-4.22.jar                                 | None                                     |
+	| L     | locks                       | 3.0.0                      | Locks-1.12.2-3.0.0.jar                                       | None                                     |
+	| L     | loottweaker                 | 0.3.1                      | LootTweaker-0.3.1+MC1.12.2.jar                               | None                                     |
+	| L     | lostcities                  | 2.0.22                     | lostcities-1.12-2.0.22.jar                                   | None                                     |
+	| L     | lycanitesmobs               | 2.0.8.9 - MC 1.12.2        | lycanitesmobs-1.12.2-2.0.8.9.jar                             | None                                     |
+	| L     | mantle                      | 1.12-1.3.3.55              | Mantle-1.12-1.3.3.55.jar                                     | None                                     |
+	| L     | materialtweaker             | 1.1.1                      | MaterialTweaker-1.1.1.jar                                    | None                                     |
+	| L     | mcwbridges                  | 1.0.6                      | mcw-bridges-1.0.6b-mc1.12.2.jar                              | None                                     |
+	| L     | testdummy                   | 1.12                       | MmmMmmMmmMmm-1.12-1.14.jar                                   | None                                     |
+	| L     | mobends                     | 1.2.1                      | MoBends_1.12.2-1.2.1-19.12.21.jar                            | None                                     |
+	| L     | modtweaker                  | 4.0.19                     | modtweaker-4.0.20.11.jar                                     | None                                     |
+	| L     | mtlib                       | 3.0.7                      | MTLib-3.0.7.jar                                              | None                                     |
+	| L     | notreepunching              | 2.0.21                     | notreepunching-2.0.21.jar                                    | None                                     |
+	| L     | pigstep                     | 1.12                       | pigstep-1.12.jar                                             | None                                     |
+	| L     | placebo                     | 1.6.0                      | Placebo-1.12.2-1.6.0.jar                                     | None                                     |
+	| L     | playerbosses                | 1.0                        | playerbosses-1.12.2-1.1.0.jar                                | None                                     |
+	| L     | portaldupebegone            | 1.0.0                      | PortalDupeBegone-1.0.0.jar                                   | None                                     |
+	| L     | potioncore                  | 1.9_for_1.12.2             | PotionCore-1.9_for_1.12.2.jar                                | None                                     |
+	| L     | potionfingers               | r1.0-8                     | PotionFingers-r1.0-8.jar                                     | None                                     |
+	| L     | qualitytools                | 1.0.7_for_1.12.2           | QualityTools-1.0.7_for_1.12.2.jar                            | None                                     |
+	| L     | quark                       | r1.6-179                   | Quark-r1.6-179.jar                                           | None                                     |
+	| L     | reachfix                    | 1.0.8                      | ReachFix-1.12.2-1.0.8.jar                                    | None                                     |
+	| L     | realistictorches            | 2.1.2                      | RealisticTorches-1.12.2-2.1.2.jar                            | None                                     |
+	| L     | reborncore                  | 3.19.5                     | RebornCore-1.12.2-3.19.5-universal.jar                       | None                                     |
+	| L     | reccomplex                  | 1.4.8.4                    | RecurrentComplex-1.4.8.4.jar                                 | None                                     |
+	| L     | reskillable                 | 1.12.2-1.13.0              | Reskillable-1.12.2-1.13.0.jar                                | None                                     |
+	| L     | artifacts                   | 1.1.2                      | RLArtifacts-1.1.2.jar                                        | None                                     |
+	| L     | bettercombatmod             | 2.0.8                      | RLCombat-1.12.2-2.0.8.jar                                    | None                                     |
+	| L     | rlmixins                    | 1.2.14                     | RLMixins-1.2.15.jar                                          | None                                     |
+	| L     | rltweaker                   | 0.5.12                     | RLTweaker-1.12.2-0.5.12.jar                                  | None                                     |
+	| L     | roguelike                   | 2.4.4                      | RoguelikeDungeonsFnarEdition-1.12.2-2.4.4.jar                | None                                     |
+	| L     | roughtweaks                 | 1.0                        | roughTweaks0.2.4-1.12.2.jar                                  | None                                     |
+	| L     | ruins                       | 17.2                       | Ruins-1.12.2.jar                                             | None                                     |
+	| L     | rustic                      | 1.1.7                      | rustic-1.1.7.jar                                             | None                                     |
+	| L     | scalinghealth               | 1.3.37                     | ScalingHealth-1.12.2-1.3.42+147.jar                          | None                                     |
+	| L     | sereneseasons               | 1.2.18                     | SereneSeasons-1.12.2-1.2.18-universal.jar                    | None                                     |
+	| L     | setbonus                    | 1.12.2.020                 | SetBonus-1.12.2.020.jar                                      | None                                     |
+	| L     | shieldbreak                 | 1.1.3                      | ShieldBreak-1.1.3.jar                                        | None                                     |
+	| L     | silentlib                   | 3.0.13                     | SilentLib-1.12.2-3.0.14+168.jar                              | None                                     |
+	| L     | simpledifficulty            | 0.3.9                      | SimpleDifficulty-1.12.2-0.3.9.jar                            | None                                     |
+	| L     | sit                         | v1.3                       | sit-1.12.2-v1.3.jar                                          | None                                     |
+	| L     | snowrealmagic               | 0.7.1                      | SnowRealMagic-1.12.2-0.7.1.jar                               | None                                     |
+	| L     | somanyenchantments          | 0.5.5                      | SoManyEnchantments-0.5.5.jar                                 | None                                     |
+	| L     | spark                       | 1.6.3                      | spark-forge.jar                                              | None                                     |
+	| L     | spartandefiled              | 1.0                        | spartandefiled-1.0.jar                                       | None                                     |
+	| L     | spartanfire                 | 1.1.0                      | spartanfire_rlcraft-1.1.0.jar                                | None                                     |
+	| L     | spartanshields              | 1.5.5                      | SpartanShields-1.12.2-1.5.5.jar                              | None                                     |
+	| L     | spartanweaponry             | 1.5.3                      | SpartanWeaponry-1.12.2-1.5.3.jar                             | None                                     |
+	| L     | spawnercontrol              | 1.6.3b                     | SpawnerControl-1.6.3b.jar                                    | None                                     |
+	| L     | srparasites                 | 1.9.11                     | SRParasites-1.12.2v1.9.11.jar                                | None                                     |
+	| L     | bq_standard                 | 3.4.173                    | StandardExpansion-3.4.173.jar                                | None                                     |
+	| L     | surge                       | 2.0.79                     | Surge-1.12.2-2.0.79.jar                                      | None                                     |
+	| L     | switchbow                   | 1.6.8                      | switchbow-1.6.8.jar                                          | None                                     |
+	| L     | tiquality                   | FAT-1.12.2-GAMMA-1.8.1-124 | Tiquality-FAT-1.12.2-GAMMA-1.8.1-124.jar                     | None                                     |
+	| L     | tnt_utilities               | 1.2.3                      | tnt_utilities-mc1.12-1.2.3.jar                               | None                                     |
+	| L     | toolbelt                    | 1.9.14                     | ToolBelt-1.12.2-1.9.14.jar                                   | None                                     |
+	| L     | traverse                    | 1.6.0                      | Traverse-1.12.2-1.6.0-69.jar                                 | None                                     |
+	| L     | xat                         | 0.32                       | Trinkets+and+Baubles-32.4.jar                                | None                                     |
+	| L     | trumpetskeleton             | 1.12-1.0.2.1               | trumpetskeleton-1.12-1.0.2.1.jar                             | None                                     |
+	| L     | tschipplib                  | 1.1.6                      | tschipplib-1.12.2-1.1.7.jar                                  | None                                     |
+	| L     | tumbleweed                  | 1.12-0.4.7                 | tumbleweed-1.12-0.4.7.jar                                    | None                                     |
+	| L     | variedcommodities           | 1.12.2                     | VariedCommodities_1.12.2-(31Mar23).jar                       | None                                     |
+	| L     | waystones                   | 4.1.0                      | Waystones_1.12.2-4.1.0.jar                                   | None                                     |
+	| L     | wearablebackpacks           | 3.2.6                      | WearableBackpacks-RLCraft-1.12.2-3.2.6.jar                   | None                                     |
+	| L     | wolfarmor                   | 3.8.1+alpha.1              | WolfArmorAndStorage-3.8.1+1.12.2.alpha.1-SNAPSHOT-signed.jar | None                                     |
+	| L     | xpfromharvest               | 1.2.0                      | XPFromHarvest-1.12.2-1.2.0.jar                               | None                                     |
+	| L     | xpbook                      | v1.1.6                     | xptome-1.12.2-v1.1.6.jar                                     | None                                     |
+	| L     | yungslaw                    | 1.12.2                     | YungsLaw-1.12.2-1.0.4.jar                                    | None                                     |
+	| L     | kiwi                        | 0.5.3.32                   | Kiwi-1.12.2-0.5.3.32.jar                                     | None                                     |
+	| L     | llibrary                    | 1.7.20                     | llibrary-1.7.20-1.12.2.jar                                   | None                                     |
+	| L     | orelib                      | 3.6.0.1                    | OreLib-1.12.2-3.6.0.1.jar                                    | None                                     |
+	| L     | rtg                         | 6.1.0.0-snapshot.1         | RTG-1.12.2-6.1.0.0-snapshot.1.jar                            | None                                     |
+	| L     | phosphor-lighting           | 1.12.2-0.2.7               | phosphor-forge-mc1.12.2-0.2.7-universal.jar                  | None                                     |
+
+
+	Plugins:
+
+	| State | ID | Version | Source | Signature |
+	|:----- |:-- |:------- |:------ |:--------- |
+
+	Loaded coremods (and transformers): 
+MixinLoader (BedBreakBegone-1.0.2.jar)
+  
+SimpleDifficulty ASM (SimpleDifficulty-1.12.2-0.3.9.jar)
+  com.charles445.simpledifficulty.asm.SimpleDifficultyASM
+RLTweaker ASM (RLTweaker-1.12.2-0.5.12.jar)
+  com.charles445.rltweaker.asm.RLTweakerASM
+LibrarianLib Plugin (librarianlib-1.12.2-4.22.jar)
+  com.teamwizardry.librarianlib.asm.LibLibTransformer
+ParticleCullingLoadingPlugin (particleculling-1.12.2-v1.4.1.jar)
+  
+WolfArmorCore (WolfArmorAndStorage-3.8.1+1.12.2.alpha.1-SNAPSHOT-signed.jar)
+  
+ItemPatchingLoader (ItemPhysic_Full_1.4.37_mc1.12.2.jar)
+  com.creativemd.itemphysic.ItemTransformer
+MixinLoader (Locks-1.12.2-3.0.0.jar)
+  
+TransformLoader (DynamicSurroundings-1.12.2-3.6.2.1.jar)
+  
+PhosphorFMLLoadingPlugin (phosphor-forge-mc1.12.2-0.2.7-universal.jar)
+  
+Quark Plugin (Quark-r1.6-179.jar)
+  vazkii.quark.base.asm.ClassTransformer
+RLMixinsPlugin (RLMixins-1.2.15.jar)
+  
+LoadingPlugin (Bloodmoon-MC1.12.2-1.5.3.jar)
+  lumien.bloodmoon.asm.ClassTransformer
+SpartanWeaponry-MixinLoader (SpartanWeaponry-1.12.2-1.5.3.jar)
+  
+LoadingPlugin (ResourceLoader-MC1.12.1-1.5.3.jar)
+  lumien.resourceloader.asm.ClassTransformer
+IvToolkit (IvToolkit-1.3.3-1.12.jar)
+  
+LoadingPlugin (Reskillable-1.12.2-1.13.0.jar)
+  codersafterdark.reskillable.base.asm.ClassTransformer
+Inventory Tweaks Coremod (InventoryTweaks-1.64+dev.151.jar)
+  invtweaks.forge.asm.ContainerTransformer
+SpongeCoremod (spongeforge-1.12.2-2838-7.4.7.jar)
+  org.spongepowered.common.launch.transformer.SpongeSuperclassTransformer
+RBLoadingPlugin (RealBench-1.12.2-1.3.3.jar)
+  pw.prok.realbench.asm.RBTransformer
+SSLoadingPlugin (SereneSeasons-1.12.2-1.2.18-universal.jar)
+  sereneseasons.asm.transformer.EntityRendererTransformer
+  sereneseasons.asm.transformer.WorldTransformer
+ReachFixPlugin (ReachFix-1.12.2-1.0.8.jar)
+  meldexun.reachfix.asm.ReachFixClassTransformer
+SoManyEnchantments ASM (SoManyEnchantments-0.5.5.jar)
+  com.Shultrea.Rin.Transformer.SMEASM
+ForgelinPlugin (Forgelin-1.8.4.jar)
+  
+CreativePatchingLoader (CreativeCore_v1.10.70_mc1.12.2.jar)
+  
+MaterialTweakerPlugin (MaterialTweaker-1.1.1.jar)
+  
+Snow! Real Magic! (SnowRealMagic-1.12.2-0.7.1.jar)
+  
+SurgeLoadingPlugin (Surge-1.12.2-2.0.79.jar)
+  
+MixinBooter (!mixinbooter-8.9.jar)
+  
+Born in a Barn (Born In A Barn V1.8-1.12-1.1.jar)
+  com.chocohead.biab.BornInABarn
+CharmLoadingPlugin (Charm-1.12.2-1.4.1.jar)
+  svenhjol.charm.base.CharmClassTransformer
+llibrary (llibrary-core-1.0.11-1.12.2.jar)
+  net.ilexiconn.llibrary.server.core.plugin.LLibraryTransformer
+  net.ilexiconn.llibrary.server.core.patcher.LLibraryRuntimePatcher
+CorePlugin (ForgeEndertech-1.12.2-4.5.6.1-build.0648.jar)
+  
+Better Biome Blend (betterbiomeblend-1.12.2-1.1.7-forge.jar)
+  
+TNTUtilities Core (tnt_utilities-mc1.12-1.2.3.jar)
+  ljfa.tntutils.asm.ExplosionTransformer
+MixinLoader (framevoidpatch-1.0.0.jar)
+  
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge,sponge'
+	Type: Dedicated Server (map_server.txt)

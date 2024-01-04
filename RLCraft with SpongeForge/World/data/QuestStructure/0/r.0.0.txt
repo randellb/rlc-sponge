@@ -1,0 +1,16 @@
+RLCraft_DecentSkeleton,43,43,378,378
+RLCraft_UndergroundRuin3,41,49,375,383
+RLCraft_BasicWitch,90,90,438,438
+RLCraft_UndergroundRuin1,84,93,432,441
+SmallAbandonedMine,110,135,256,271
+RLCraft_DecentSkeleton,125,125,451,451
+RLCraft_UndergroundRuin3,122,130,445,453
+RLCraft_SmallUndergroundSkeleton,182,190,243,251
+P_RuinedHouse,202,219,108,133
+StonePlantMound3,268,279,433,442
+ShrineSmallFire,260,270,445,455
+StonePlantMound3,294,305,200,209
+StoneLeafMound,293,300,261,270
+RLCraft_BasicCaveSpider,319,319,346,346
+RLCraft_UndergroundRuin1,313,322,340,349
+MysticalTree2,334,344,144,154
