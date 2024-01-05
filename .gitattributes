@@ -1,1 +1,2 @@
 RLCraft[[:space:]]with[[:space:]]SpongeForge/ filter=lfs diff=lfs merge=lfs -text
+RLCraftVanilla/ filter=lfs diff=lfs merge=lfs -text
